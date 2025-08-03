@@ -6,7 +6,6 @@ ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
 
 COPY . /app
-COPY public/ /app/public
 
 WORKDIR /app
 

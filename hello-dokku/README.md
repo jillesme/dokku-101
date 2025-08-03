@@ -11,10 +11,12 @@ $ docker build . -t jilles/hello-dokku
 ```
 
 Then you want to run it. We add a few flags:
+1. `--init` --  Run an init inside the container that forwards signals and reaps processes. This is so that ctrl+c works to kill the process and container
+1. `-it` -- Interactive + TTY
 1. `--rm` -- Automatically remove the container and its associated anonymous volumes when it exits
-2. `--name` -- Name of the container instead of just a hash
-3. `-p 3000:3000` -- Forwards port 3000 on our host to port 3000 on our container
+1. `--name` -- Name of the container instead of just a hash
+1. `-p 3000:3000` -- Forwards port 3000 on our host to port 3000 on our container
 
 ``` bash
-$ docker run --rm --name hello-dokku -p 3000:3000 jilles/hello-dokku
+$ docker run --init -it --rm --name hello-dokku -p 3000:3000 jilles/hello-dokku
 ```

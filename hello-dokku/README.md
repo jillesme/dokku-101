@@ -1,6 +1,6 @@
 # Dokku 101 - Hello Dokku
 
-This is a simple Docker container that runs an Express application which serves HTML that renders the dokku logo.
+This is a simple Docker image that runs an Express application which serves HTML that renders the dokku logo.
 
 ## Building the Image Locally
 
